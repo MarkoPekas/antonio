@@ -29,7 +29,7 @@ export default function Home() {
         measure: measures[index]
       })
     } )
-
+    
     setData({
       name: data.meals[0].strMeal, 
       image: data.meals[0].strMealThumb,
@@ -40,9 +40,12 @@ export default function Home() {
       ingredients: ingredientsAndMeasures,
       instructions: data.meals[0].strInstructions
     })
-    })
-  }
-  return (
+  })
+}
+useEffect(() => {
+  GetRandomMeal()
+} , [])
+return (
     <div className="font-['Open_Sans'] flex w-full justify-center flex-col md:flex-row">
       <div className="p-4 h-screen flex max-w-2xl w-full ">
         <Head>
