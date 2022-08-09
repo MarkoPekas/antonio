@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <p className='font-semibold mt-4'>instructions</p>
           <p>
-            {data.instructions}
+            {data?.instructions}
           </p>
         </div>
       </div>
