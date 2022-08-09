@@ -46,6 +46,8 @@ export default function Home() {
     <div className="font-['Open_Sans'] flex w-full justify-center flex-col md:flex-row">
       <div className="p-4 h-screen flex max-w-2xl w-full ">
         <Head>
+          <title>Antonio</title>
+          <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800,900,500" rel="stylesheet" type="text/css" />
         </Head>
         <div className='space-y-4 w-full flex flex-col h-full'>
@@ -60,7 +62,7 @@ export default function Home() {
         </div>
       </div>
       <div className="p-4 flex">
-        <div className='p-4 rounded-md w-full shadow-xl flex-1 md:w-64'>
+        <div className='p-4 rounded-md w-full shadow-xl flex-1 md:w-72'>
           <div className='grid grid-cols-2'>
             {data?.ingredients?.map((item, i) => (
               <>
@@ -69,8 +71,8 @@ export default function Home() {
               </>
             ))}
           </div>
-          <p className='font-semibold mt-4'>instructions</p>
-          <p>
+          <p className='font-semibold text-sm mt-4'>instructions</p>
+          <p className='text-sm'>
             {data?.instructions}
           </p>
         </div>
